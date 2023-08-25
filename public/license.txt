@@ -1,0 +1,11 @@
+Model Information:
+* title:	Antique Desk with Props
+* source:	https://sketchfab.com/3d-models/antique-desk-with-props-245f2ed9abd04b1f801c19b27a235262
+* author:	Matthew Collings (https://sketchfab.com/mtcollings)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Antique Desk with Props" (https://sketchfab.com/3d-models/antique-desk-with-props-245f2ed9abd04b1f801c19b27a235262) by Matthew Collings (https://sketchfab.com/mtcollings) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

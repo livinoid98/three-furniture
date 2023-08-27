@@ -10,25 +10,28 @@ const ThreeModel = () => {
       scene.background = new THREE.Color(0xffffff);
       const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
       const renderer = new THREE.WebGLRenderer();
+      const light = new THREE.DirectionalLight(0xffffff, 1);
+      light.position.set(1, 1, 1); // 조명 위치 설정
+      light.color.setHex(0xffffff); // 흰색 조명
+      light.intensity = 1; // 강도 설정
+      light.castShadow = true; // 조명이 그림자 생성
       renderer.setSize(window.innerWidth, window.innerHeight);
       sceneRef.current.appendChild(renderer.domElement);
 
       const loader = new GLTFLoader();
       loader.load('/scene.gltf', (gltf) => {
         const model = gltf.scene;
-        const texturePath = '/wallpaper.png';
+        const texturePath = '/textures/wallpaper.png';
         const textureLoader = new THREE.TextureLoader();
         const texture = textureLoader.load(texturePath);
-        const material = new THREE.MeshStandardMaterial({
-          map: texture,
-        });
 
         model.traverse((child) => {
-          if (child instanceof THREE.Mesh) {
-            child.material = material;
+          if (child.isMesh) {
+              child.material = new THREE.MeshStandardMaterial({ map: texture });
           }
-        });
+      });
       scene.add(model);
+      scene.add(light);
 
       camera.position.z = 5;
 
